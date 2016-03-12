@@ -42,7 +42,7 @@ class Calculator: NSObject {
             result = 9999;
         }
         
-        return result;
+        return rounding(result);
     }
     
     
@@ -60,6 +60,11 @@ class Calculator: NSObject {
     
     func div() -> Double{
         return firstNum! / secondNum!;
+    }
+    
+    func rounding(n: Double) -> Double{
+        return round(n * 100) / 100
+        
     }
     
     

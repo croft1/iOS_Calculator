@@ -40,6 +40,9 @@
                                     <segment title="/"/>
                                     <segment title="-"/>
                                 </segments>
+                                <connections>
+                                    <action selector="operationSelectorAction:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="Vc2-92-VQI"/>
+                                </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrh-N7-zEg">
                                 <rect key="frame" x="272" y="490" width="57" height="21"/>
