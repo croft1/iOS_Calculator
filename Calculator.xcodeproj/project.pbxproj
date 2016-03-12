@@ -14,6 +14,7 @@
 		967AD09F1C93C470006DA665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967AD09D1C93C470006DA665 /* LaunchScreen.storyboard */; };
 		967AD0AA1C93C470006DA665 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD0A91C93C470006DA665 /* CalculatorTests.swift */; };
 		967AD0B51C93C470006DA665 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD0B41C93C470006DA665 /* CalculatorUITests.swift */; };
+		967AD0C31C93D097006DA665 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967AD0C21C93D097006DA665 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		967AD0B01C93C470006DA665 /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		967AD0B41C93C470006DA665 /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		967AD0B61C93C470006DA665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967AD0C21C93D097006DA665 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				967AD0981C93C470006DA665 /* Main.storyboard */,
 				967AD09B1C93C470006DA665 /* Assets.xcassets */,
 				967AD09D1C93C470006DA665 /* LaunchScreen.storyboard */,
+				967AD0C21C93D097006DA665 /* Calculator.swift */,
 				967AD0A01C93C470006DA665 /* Info.plist */,
 			);
 			path = Calculator;
@@ -258,6 +261,7 @@
 			files = (
 				967AD0971C93C470006DA665 /* ViewController.swift in Sources */,
 				967AD0951C93C470006DA665 /* AppDelegate.swift in Sources */,
+				967AD0C31C93D097006DA665 /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

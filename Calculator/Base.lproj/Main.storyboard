@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Carter's iOS Calculator-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,22 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfO-2b-rzf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jfO-2b-rzf">
                                 <rect key="frame" x="162" y="146" width="277" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="277" id="rLn-wd-UVK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWL-xc-RQH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JWL-xc-RQH">
                                 <rect key="frame" x="162" y="285" width="277" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoL-Vc-5sA">
-                                <rect key="frame" x="268" y="415" width="64" height="30"/>
-                                <state key="normal" title="Calculate"/>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qU7-60-qzI">
-                                <rect key="frame" x="162" y="208" width="277" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="qU7-60-qzI">
+                                <rect key="frame" x="162" y="216" width="277" height="29"/>
                                 <segments>
                                     <segment title="+"/>
                                     <segment title="*"/>
@@ -40,10 +39,42 @@
                                     <segment title="-"/>
                                 </segments>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrh-N7-zEg">
+                                <rect key="frame" x="272" y="464" width="57" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoL-Vc-5sA">
+                                <rect key="frame" x="268" y="368" width="64" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="butCalculate" destination="BYZ-38-t0r" eventType="touchUpInside" id="W2J-GS-JNO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QoL-Vc-5sA" firstAttribute="top" secondItem="JWL-xc-RQH" secondAttribute="bottom" constant="55" id="2dv-Ys-l6w"/>
+                            <constraint firstItem="QoL-Vc-5sA" firstAttribute="centerX" secondItem="nrh-N7-zEg" secondAttribute="centerX" id="BMa-eX-v5v"/>
+                            <constraint firstItem="JWL-xc-RQH" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Lao-1N-3U9"/>
+                            <constraint firstItem="JWL-xc-RQH" firstAttribute="centerX" secondItem="QoL-Vc-5sA" secondAttribute="centerX" id="Q7o-qK-cCQ"/>
+                            <constraint firstItem="nrh-N7-zEg" firstAttribute="top" secondItem="QoL-Vc-5sA" secondAttribute="bottom" constant="64" id="Rr2-mw-14r"/>
+                            <constraint firstItem="jfO-2b-rzf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WH5-ju-mYE"/>
+                            <constraint firstItem="JWL-xc-RQH" firstAttribute="top" secondItem="qU7-60-qzI" secondAttribute="bottom" constant="41" id="d2Y-py-Hzo"/>
+                            <constraint firstItem="qU7-60-qzI" firstAttribute="top" secondItem="jfO-2b-rzf" secondAttribute="bottom" constant="40" id="egE-PF-xFF"/>
+                            <constraint firstItem="JWL-xc-RQH" firstAttribute="trailing" secondItem="qU7-60-qzI" secondAttribute="trailing" id="iQ4-83-1jl"/>
+                            <constraint firstItem="jfO-2b-rzf" firstAttribute="trailing" secondItem="qU7-60-qzI" secondAttribute="trailing" id="oZV-3U-wUl"/>
+                            <constraint firstItem="jfO-2b-rzf" firstAttribute="leading" secondItem="qU7-60-qzI" secondAttribute="leading" id="rFt-Tj-hNI"/>
+                            <constraint firstItem="qU7-60-qzI" firstAttribute="leading" secondItem="JWL-xc-RQH" secondAttribute="leading" id="yC8-OZ-KZ3"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VeS-EV-7gh"/>
+                    <navigationItem key="navigationItem" title="Carter's iOS Calculator" id="VeS-EV-7gh"/>
+                    <connections>
+                        <outlet property="inputNumBottom" destination="JWL-xc-RQH" id="WId-rR-2h5"/>
+                        <outlet property="inputNumTop" destination="jfO-2b-rzf" id="Tqj-xm-KyS"/>
+                        <outlet property="operationSelector" destination="qU7-60-qzI" id="b94-W1-Z9r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
