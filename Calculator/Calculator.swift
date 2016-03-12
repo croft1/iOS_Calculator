@@ -24,7 +24,7 @@ class Calculator: NSObject {
     
     
     func performOperation(operation: String) -> Double{
-        var result: Double;
+        var result: Double
         switch(operation){
         case "+":
             result = add();
@@ -32,11 +32,11 @@ class Calculator: NSObject {
         case "-":
             result = sub();
             break;
-        case "*":
-            result = mul();
-            break;
         case "/":
             result = div();
+            break;
+        case "*":
+            result = mul();
             break;
         default:
             result = 9999;
@@ -62,8 +62,6 @@ class Calculator: NSObject {
         return firstNum! / secondNum!;
     }
     
-    func isDivisible( firstNum: Double, secondNum: Double) -> Bool{
-        
-        return(firstNum == 0 || secondNum == 0)}
+    
 }
 
